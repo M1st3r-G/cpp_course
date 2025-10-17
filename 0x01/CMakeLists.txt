@@ -18,3 +18,8 @@ add_executable(westrosecliff_one_solution solutions/westrosecliff_one_solution.c
 add_executable(beverlyhollow_one_solution solutions/beverlyhollow_one_solution.cpp)
 add_executable(bluecanyon_one_solution solutions/bluecanyon_one_solution.cpp)
 add_executable(pinepoint_one_solution solutions/pinepoint_one_solution.cpp)
+
+add_executable(westrosecliff_custom custom/westrosecliff.cpp)
+add_executable(bluecanyon_custom custom/bluecanyon.cpp)
+add_executable(beverlyhollow_custom custom/beverlyhollow.cpp)
+add_executable(pinepoint_custom custom/pinepoint.cpp)

@@ -11,7 +11,7 @@ CXX := g++
 CXXFLAGS := -ansi -pedantic -Wall -Wextra -Wconversion -pthread -std=c++23
 LDFLAGS := -lm
 
-SRC := ./snippets ./solutions
+SRC := ./snippets ./solutions ./custom
 OBJ := ./out
 
 # collect  files
