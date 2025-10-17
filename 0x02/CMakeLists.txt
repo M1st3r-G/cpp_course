@@ -15,3 +15,8 @@ add_executable(bakerriver_one_solution solutions/bakerriver_one_solution.cpp)
 add_executable(elkford_one_solution solutions/elkford_one_solution.cpp)
 add_executable(harshire_one_solution solutions/harshire_one_solution.cpp)
 add_executable(sanborncliff_one_solution solutions/sanborncliff_one_solution.cpp)
+
+add_executable(baker_river_custom custom/bakerriver.cpp)
+add_executable(sanborn_cliff_custom custom/sanborncliff.cpp)
+add_executable(elkford_custom custom/elkford.cpp)
+add_executable(harshire_custom custom/harshire.cpp)
