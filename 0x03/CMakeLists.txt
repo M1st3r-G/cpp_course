@@ -15,3 +15,10 @@ add_executable(meadowriver_one_solution solutions/meadowriver_one_solution.cpp)
 add_executable(ravencastle_one_solution solutions/ravencastle_one_solution.cpp)
 add_executable(stoneridge_one_solution solutions/stoneridge_one_solution.cpp)
 add_executable(coral_creek_one_solution solutions/coral_creek_one_solution.cpp)
+
+# Custom
+add_executable(ravencaste_custom custom/Ravencastle.cpp)
+add_executable(stone_ridge_cusom custom/StoneRidge.cpp)
+add_executable(lucky_rock_custom custom/LuckyRock.cpp)
+add_executable(meadow_river_custom custom/MeadowRiver.cpp)
+add_executable(coral_creek_custom custom/CoralCreek.cpp)
