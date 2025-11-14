@@ -14,3 +14,8 @@ add_executable(study_more_iterators snippets/study_more_iterators.cpp)
 add_executable(oakberg_one_solution solutions/oakberg_one_solution.cpp)
 add_executable(ashfield_one_solution solutions/ashfield_one_solution.cpp)
 add_executable(sparrowtown_one_solution solutions/sparrowtown_one_solution.cpp)
+
+add_executable(oakberg_custom_solution custom/Oakberg.cpp)
+add_executable(ashfield_custom_solution custom/Ashfield.cpp)
+add_executable(sparrow_town_custom_solution custom/SparrowTown.cpp)
+add_executable(brickgate_custom_solution custom/brickgate.cpp)
