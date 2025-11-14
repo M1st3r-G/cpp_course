@@ -11,3 +11,8 @@ add_executable(copperview_one_solution solutions/copperview_one_solution.cpp)
 add_executable(kengate_one_solution solutions/kengate_one_solution.cpp)
 add_executable(mcallenspring_one_solution solutions/mcallenspring_one_solution.cpp)
 add_executable(dontdothisorilltellyourmum_one_solution solutions/dontdothisorilltellyourmum_one_solution.cpp)
+
+add_executable(copper_view_custom_solution custom/copper_view.cpp)
+add_executable(kengate_custom_solution custom/kengate.cpp)
+add_executable(mcAlen_custom_soluiton custom/mc_allen_spring.cpp)
+add_executable(dontdothisorilltellyourmum_custom_solution custom/dont_do_this_or_ill_tell_your_mum.cpp)
