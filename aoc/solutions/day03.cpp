@@ -4,11 +4,11 @@
  * AoC Day 03 solution.
  */
 
-#include "aoc.h"
+#include "aoc.hpp"
 
 namespace {
-    constexpr array examples =  {
-        R"(
+    constexpr std::array examples =  {
+R"(
 987654321111111
 811111111111119
 234234234234278
@@ -24,7 +24,7 @@ namespace {
  * e.g. '-O3' (see CMakeList) string& and string_view have similar execution speed.
  */
 
-int64_t calcJoltage(const string_view line, const size_t digits) {
+constexpr int64_t calcJoltage(const string_view line, const size_t digits) {
     size_t pos{0};          // just for readability, one can solve this with first and it only
     int64_t result{0};      // instead of collecting chars
     for (size_t j=1; j<=digits; ++j) {
@@ -41,7 +41,7 @@ int64_t calcJoltage(const string_view line, const size_t digits) {
     return result;
 }
 
-solutions solve(const Lines &lines) {
+aoc::solutions solve(std::ranges::input_range auto&& lines) {
     int64_t sum1{0};
     int64_t sum2{0};
     for (const auto &line : lines) {
@@ -55,17 +55,18 @@ int main() {
     println("\n--- {} ---\n", __FILE__);
 
     constexpr auto day = 3;
-    constexpr auto example = 0;
+    constexpr auto example = -1;
+    aoc::println(day, example);
 
-    const auto lines = (example > 0) ? toLines(examples[example - 1]) : toLines(day);
-    print(day, example, lines.size());
+    const auto input = (example >= 0) ? aoc::Input::of(examples[example]) : aoc::Input::of(day);
+    auto lines = input | aoc::as_std_lines;
 
-    auto [answer, ms] = measure([&] { return solve(lines); });
-    print(answer, ms);
+    auto [answer, ms] = aoc::measure([&] { return solve(lines); });
+    aoc::println(answer, ms);
 
     // 17144 (357), 170371185255900 (3121910778619)
-    if constexpr (example==0) { assert(answer.part1==17144 && answer.part2==170371185255900); }
-    if constexpr (example==1) { assert(answer.part1==357 && answer.part2==3121910778619); }
+    if constexpr (example==-1) { assert(answer.part1==17144 && answer.part2==170371185255900); } // 63ms
+    if constexpr (example==0) { assert(answer.part1==357 && answer.part2==3121910778619); }
 
     return EXIT_SUCCESS;
 }
