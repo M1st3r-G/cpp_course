@@ -103,6 +103,8 @@ void simple_lambdas() {
      *  to the compiler with "auto". The syntax "->" follows the mathematical way of writing x->x^2.
      */
     auto less = [](int a, int b) -> bool { return a < b; };
+    // int n{1};
+    // auto less{ [](int a, int b) -> bool { return a < b; } };
 
     /*
      * Use a lambda expression like a function.
@@ -261,3 +263,23 @@ void generic_lambdas() {
     print_type(3.14);
     print_type("Hello, Template Lambda");
 }
+
+/*
+ * [ChatGPT] If you tried to allow:
+ *      () { ... }
+ * the compiler would have to guess whether this is:
+ *  - a function?
+ *  - a cast?
+ *  - a weird block?
+ *  - a syntax error?
+ *  - a cry for help?
+ *
+ *  :-)
+ *
+ *  A rule of thumb:
+ *      A variable is _bound_ if it is introduced inside the lambda (params, locals);
+ *      it is _free_ if it comes from an enclosing scope.
+ *
+ *  A closure object is literally a struct whose data members are the captured free variables.
+ *  Once captured, the free variable becomes part of the closure object.
+ */
